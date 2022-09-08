@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="row">
+        <div class="col-sm-5 d-flex justify-content-end mr-4">
+            <img height="100" width="100" class="rounded-circle"
+                src="https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg"
+                alt="error">
+        </div>
+        <div class="col-sm-7 d-flex align-items-center">
+            <h2> My Blogs </h2>
+        </div>
+    </div>
+    <div class="text-center my-2 text-secondary">
+        <p>Hi, I am Abhay and I love to blog about tech and the world!</p>
+    </div>
+</div>
+<section id="latest-posts">
+    <div class="col-sm-8 mx-auto my-3">
+        {% for post in  posts %}
+    {% include "blog/includes/post.html" %}
+    {% endfor %}
+    </div>
+    
+</section>
+
+<section id="about">
+    <h2>What I Do</h2>
+    <p>I love programming, I love to help others and I enjoy exploring new technologies in general!</p>
+    <p>My goal is to keep on growing as a developer - and if I could help you do the same, I'd be very happy!</p>
+</section>
+{% endblock %}
