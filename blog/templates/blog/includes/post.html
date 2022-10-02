@@ -1,13 +1,12 @@
-
 <a class="card text-decoration-none my-4 mx-4" href="{% url 'post-detail-page' post.slug %}">
     <div class="card-body">
         <h4 class="text-center">My Latest Thoughts</h4>
     </div>
     <div class="text-center mx-4">
         <img height="75" width="75" class="rounded-circle"
-            src="{{post.image}}"
+            src="{{ post.image.url }}"
             alt="{{post.title}}">
         <h5 class="mt-2">{{post.title}}</h5>
-        <p class="text-secondary">{{post.excert}}</p>
+        <p class="text-secondary">{{post.excerpt}}</p>
     </div>
 </a>
