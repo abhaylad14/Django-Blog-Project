@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}My Blog{% endblock %}
 
 {% block content %}
 <div class="container my-4">
     <div class="row">
         <div class="col-sm-5 d-flex justify-content-end mr-4">
-            <img height="100" width="100" class="rounded-circle"
-                src="https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg"
+            <img height="150" width="150" class="rounded-circle"
+            src="{% static 'blog/images/user.jpg' %}"
+                {% comment %} src="https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg" {% endcomment %}
                 alt="error">
         </div>
         <div class="col-sm-7 d-flex align-items-center">
